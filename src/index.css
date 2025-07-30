@@ -1,0 +1,238 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #ffffff;
+  color: #333;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 33px 220px;
+  align-items: center;
+}
+
+.logo {
+  font-size: 4.0rem;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+}
+
+.open-app {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  /* Added for animated gradient button */
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Animated gradient for .open-app button */
+.open-app::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(60deg, #f06, #f70, #09f, #0f9, #f06); /* Multiple colors for vibrant gradient */
+  background-size: 300% 300%;
+  z-index: -1;
+  transition: background-position 0.3s ease; /* Smooth transition for background movement */
+}
+
+.open-app:hover::before {
+  animation: gradientAnimation 2s linear infinite; /* Animates the background continuously */
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.announcement h5 {
+  display: inline-block;
+  background: #ffffff;
+  padding: 4px 10px;         /* Reduced padding */
+  border-radius: 999px;
+  font-size: 0.8rem;         /* Slightly smaller font */
+  color: #ffffff;
+  margin-bottom: 4px;        /* Optional: reduce vertical space */
+}
+
+
+.announcement h4 {
+  color: #5b5b5b;
+  text-decoration: none;
+  padding-right: 33rem;
+}
+
+.hero h1 {
+  font-size: 3.1rem;
+  margin: 20px 0;
+  padding-left: 13rem;
+  text-align: left;
+  /* Gradient text properties */
+  background: rgb(0, 0, 0); /* Example gradient colors */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent; /* Fallback for browsers that don't support text-fill-color */
+}
+
+
+.hero p {
+  font-size: 1.6rem;
+  color: #666;
+  margin-bottom: 30px;
+  padding-left: 13rem;
+  text-align: left;
+}
+
+.cta {
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 999px;
+  border: 1px solid #ccc;
+  background: white;
+  cursor: pointer;
+  margin-bottom: 50px;
+  
+  margin-left: -54rem; /* Shift slightly left */
+}
+.cta:hover {
+  background-color: #000;
+  color: #fff;
+  border-color: #000;
+  transform: scale(1.05);
+}
+
+.img1{
+  display: flex;
+  justify-content: center;
+  margin-top: -195px;
+  padding-left: 7rem;
+  width: 81rem;    /* sets image width */
+  height: auto;
+}
+
+.logo img {
+  height: 40px;     /* or adjust as needed */
+  width: auto;
+  display: block;
+}
+
+nav a:hover {
+  color: #555;           /* Darker or lighter depending on your design */
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect for Open App button (original hover effects are commented out as they conflict with gradient) */
+/* .open-app:hover {
+  background-color: #333;
+  color: #fff;
+  transform: scale(1.05);    
+  transition: all 0.3s ease;
+} */
+@media screen and (max-width: 768px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 10px 20px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+
+  nav {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: nowrap;
+  }
+
+  nav a {
+    margin: 0 5px;
+    margin-top: 7px;
+    font-size: 0.7rem; /* 👈 Smaller text for nav links */
+    white-space: nowrap;
+  }
+
+  .open-app {
+    flex: 0 0 auto;
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+
+  .hero {
+    padding: 30px 20px;
+  }
+  .announcement h4 {
+    padding-right: 0;
+    font-size: 0.5rem; /* 👈 smaller text */
+    text-align: left;   /* 👈 aligned left */
+    padding-left: 52px; /* optional, add some spacing */
+  }
+
+  .hero h1 {
+    padding-left: 10px;  /* 👈 align left */
+    font-size: 1.2rem;   /* smaller heading */
+    text-align: center;    /* align text to left */
+  }
+
+  .hero p {
+    padding-left: 0;
+    font-size: 0.8rem;
+    text-align: center;
+  }
+
+  .cta {
+    margin: 20px auto;
+    display: block;
+  }
+
+  .img1 {
+    padding-left: 0;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+}
+

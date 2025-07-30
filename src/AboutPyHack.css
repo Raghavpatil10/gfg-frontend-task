@@ -1,0 +1,105 @@
+.about-section {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.about-header {
+  text-align: left;
+  margin-bottom: 3rem;
+}
+
+.about-header h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  /* Optional: Apply gradient text to this heading for consistency if desired */
+  /* If you want gradient, uncomment and adjust colors as per your hero h1 */
+  /*
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  */
+}
+
+.about-header p {
+  font-size: 1.2rem;
+  color: #6b7280; /* gray-600 */
+  margin-bottom: 1.5rem;
+}
+
+.learn-more-link {
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: underline;
+  color: black;
+  transition: color 0.3s ease, text-decoration-color 0.3s ease; /* Smooth transition */
+}
+
+.learn-more-link:hover {
+  color: #555; /* Slightly darker on hover */
+  text-decoration-color: #555; /* Underline color changes with text */
+}
+
+.learn-more-link span {
+  margin-left: 4px;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.about-card {
+  background: #f9f9f9;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column; /* Changed to column to stack image and caption */
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center; /* Center content within the card */
+
+  /* Applied subtle box-shadow */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08); /* X Y Blur Color (subtle and diffused) */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.about-card:hover {
+  transform: translateY(-5px); /* Lifts the card slightly on hover */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12); /* Shadow becomes a bit more pronounced on hover */
+}
+
+
+.about-card.large {
+  grid-row: span 2;
+}
+
+.about-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.75rem; /* Slightly smaller border-radius for image within card */
+  object-fit: cover; /* Ensures image covers the area nicely */
+}
+
+.card-caption {
+  margin-top: 1rem; /* Increased margin for better separation from image */
+  text-align: center;
+}
+
+.card-caption strong {
+  font-size: 1.15rem; /* Slightly larger for emphasis */
+  display: block;
+  margin-bottom: 0.25rem; /* Space between title and description */
+  color: #333; /* Make title a bit darker for better contrast */
+}
+
+.card-caption p {
+  font-size: 0.95rem;
+  color: #4b5563; /* gray-700 */
+}

@@ -1,0 +1,171 @@
+.workshop-section {
+  padding: 80px 160px;
+  text-align: left;
+  width: 100vw;
+  box-sizing: border-box;
+  background-color: #ffffff;
+}
+
+.workshop-section h2 {
+  font-size: 3rem;
+  margin-top: 40px;
+  margin-bottom: 50px;
+  color: #111;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 60px;
+  justify-items: center;
+}
+
+@media (min-width: 768px) {
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  border-radius: 12px;
+  padding: 40px;
+  width: 100%;
+  max-width: 1000px;
+  min-height: 250px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+  background-color: #f9f9f9;
+}
+
+.feature:hover {
+  transform: scale(1.02);
+}
+
+/* For colorful blob-style images */
+.art-image {
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 300px;
+  height: 300px;
+  opacity: 0.8;
+  z-index: 0;
+}
+
+.art-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* fallback if no image */
+.art {
+  min-width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-right: 36px;
+  z-index: 0;
+}
+
+/* text always on top */
+.text-content {
+  flex: 1;
+  z-index: 1;
+  padding-top: 188px;
+}
+
+.feature h3 {
+  margin: 0;
+  font-size: 2rem;
+  color: #111;
+}
+
+.feature p {
+  margin-top: 10px;
+  color: #555;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Optional: remove margins if image overlaps */
+.red-orange .art,
+.blue .art,
+.yellow .art,
+.purple .art {
+  margin-right: 0;
+}
+
+/* Keep other backgrounds if images aren't used */
+.red-orange .art {
+  background: conic-gradient(from 90deg at 50% 50%, #ffa726 0deg 180deg, #ef5350 180deg 360deg);
+}
+
+.blue .art {
+  background: conic-gradient(from 180deg at 50% 50%, #4fc3f7 0deg 180deg, #0288d1 180deg 360deg);
+}
+
+.yellow .art {
+  background: radial-gradient(circle at 40% 40%, #fff59d 30%, #fbc02d 60%, #fbc02d 100%);
+}
+
+.purple .art {
+  background: conic-gradient(from 270deg at 50% 50%, #ce93d8 0deg 180deg, #9575cd 180deg 360deg);
+}
+
+@media screen and (max-width: 480px) {
+  .workshop-section {
+    padding: 40px 20px;
+  }
+
+  .workshop-section h2 {
+    font-size: 2rem;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .features-grid {
+    gap: 40px;
+  }
+
+  .feature {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px;
+    min-height: auto;
+  }
+
+  .text-content {
+    padding-top: 0;
+    padding-left: 0;
+  }
+
+  .feature h3 {
+    font-size: 1.4rem;
+  }
+
+  .feature p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .art-image {
+    width: 180px;
+    height: 180px;
+    top: -30px;
+    right: -30px;
+    opacity: 0.6;
+  }
+
+  .art {
+    width: 120px;
+    height: 120px;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
