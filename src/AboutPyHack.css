@@ -103,3 +103,23 @@
   font-size: 0.95rem;
   color: #4b5563; /* gray-700 */
 }
+
+@media (max-width: 768px) {
+  .about-card {
+    overflow: hidden; /* Keeps layout intact while allowing image zoom */
+  }
+
+  .about-card img {
+    transform: scale(1.2); /* Zoom in */
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.3s ease;
+    width: 150%;
+    height: 150%;
+  }
+
+  .about-card:hover img {
+    transform: scale(1.25); /* Optional: zoom more on hover */
+  }
+}
+
