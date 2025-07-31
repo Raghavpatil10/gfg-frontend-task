@@ -207,7 +207,7 @@ nav a:hover {
     padding-right: 0;
     font-size: 0.5rem; /* 👈 smaller text */
     text-align: left;   /* 👈 aligned left */
-    padding-left: 52px; /* optional, add some spacing */
+    padding-left: 75px; /* optional, add some spacing */
   }
 
   .hero h1 {
